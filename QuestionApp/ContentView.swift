@@ -14,13 +14,15 @@ struct ContentView: View {
         NavigationStack {
                 
                 VStack {
+//                    Spacer()
+//                        .frame(height: 20)
                     Text("Welcome to a quiz to test your Bible knowledge")
                         .font(.largeTitle)
-                        .padding(.top, 50.0)
+//                        .padding(.top, 50.0)
                 }
                 
                 .padding()
-                Spacer()
+//                Spacer()
                 NavigationLink(destination: Question1()) {
                     Text("Start")
 
