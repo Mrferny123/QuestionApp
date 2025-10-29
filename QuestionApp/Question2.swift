@@ -16,6 +16,8 @@ struct Question2: View {
                     .font(.title)
                     .padding(.top, 50.0)
                 VStack {
+                    //keep track of what user got wrong through a variable
+                    //will have to let user only respond one time?
                     Button("2") {
                         message = "Incorrect"
                     }

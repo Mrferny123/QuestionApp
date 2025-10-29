@@ -50,6 +50,7 @@ struct Question3: View {
             NavigationLink(destination: ContentView()) {
                 Text("Go Back to the Start")
             }
+            //take user to congrats page
         }
     }
 }

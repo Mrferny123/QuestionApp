@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5AA0CE2EB1A9430059EB77 /* Congrats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5AA0CD2EB1A93B0059EB77 /* Congrats.swift */; };
 		0A6B9F932C2B0616006A5C25 /* QuestionAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B9F922C2B0616006A5C25 /* QuestionAppApp.swift */; };
 		0A6B9F952C2B0616006A5C25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B9F942C2B0616006A5C25 /* ContentView.swift */; };
 		0A6B9F972C2B0618006A5C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6B9F962C2B0618006A5C25 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A5AA0CD2EB1A93B0059EB77 /* Congrats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Congrats.swift; sourceTree = "<group>"; };
 		0A6B9F8F2C2B0616006A5C25 /* QuestionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6B9F922C2B0616006A5C25 /* QuestionAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAppApp.swift; sourceTree = "<group>"; };
 		0A6B9F942C2B0616006A5C25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				0A6B9FA02C2B0B02006A5C25 /* Question2.swift */,
 				0A6B9FA42C2B0CC5006A5C25 /* Question1.swift */,
 				0A6B9FA22C2B0C0D006A5C25 /* Question3.swift */,
+				0A5AA0CD2EB1A93B0059EB77 /* Congrats.swift */,
 				0A6B9F962C2B0618006A5C25 /* Assets.xcassets */,
 				0A6B9F982C2B0618006A5C25 /* Preview Content */,
 			);
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5AA0CE2EB1A9430059EB77 /* Congrats.swift in Sources */,
 				0A6B9FA12C2B0B02006A5C25 /* Question2.swift in Sources */,
 				0A6B9FA52C2B0CC5006A5C25 /* Question1.swift in Sources */,
 				0A6B9FA32C2B0C0D006A5C25 /* Question3.swift in Sources */,
