@@ -11,40 +11,47 @@ struct Question2: View {
     @State private var message = ""
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("How many days was Lazarus dead before Jesus came to visit?")
-                    .font(.title)
-                    .padding(.top, 50.0)
+            ZStack {
+                Image("blank bg")
                 VStack {
-                    //keep track of what user got wrong through a variable
-                    //will have to let user only respond one time?
-                    Button("2") {
-                        message = "Incorrect"
-                    }
-                    .font(.title)
-                    .padding()
-                    
-                    Button("4") {
-                        message = "Correct"
-                    }
-                    .font(.title)
-                    .padding()
-                    
-                    Button("3") {
-                        message = "Incorrect"
-                    }
-                    .font(.title)
-                    .padding()
-                    
-                    Button("7") {
-                        message = "Incorrect"
+                    Text("How many days was Lazarus dead before Jesus came to visit?")
+                        .frame(maxWidth: 350)
+                        .font(.title)
+                        .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
+                        .padding(.top, 50.0)
+                    VStack {
+                        //keep track of what user got wrong through a variable
+                        //will have to let user only respond one time?
+                        Button("2") {
+                            message = "Incorrect"
+                        }
+                        .font(.title)
+        
+                        .padding()
+                        
+                        Button("4") {
+                            message = "Correct"
+                        }
+                        .font(.title)
+                        .padding()
+                        
+                        Button("3") {
+                            message = "Incorrect"
+                        }
+                        .font(.title)
+                        .padding()
+                        
+                        Button("7") {
+                            message = "Incorrect"
+                            
+                        }
+                        .font(.title)
+                        .padding()
+                        
+                        Text("\(message)")
                         
                     }
-                    .font(.title)
-                    .padding()
-                    
-                    Text("\(message)")
-                    
+                    .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
                 }
             }
             .padding()
