@@ -11,40 +11,43 @@ struct Question1: View {
     @State private var message = ""
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("After Jesus fed 5,000 people, how many baskets of food were left over?")
-                    .font(.title)
-                    .padding(.top, 50.0)
+            ZStack {
+                Image("blank bg")
                 VStack {
-                    Button("15") {
-                        message = "Incorrect"
-                    }
-                    .font(.title)
-                    .padding()
-                    
-                    Button("7") {
-                        message = "Incorrect"
-                    }
-                    .font(.title)
-                    .padding()
-                    
-                    Button("12") {
-                        message = "Correct"
-                    }
-                    .font(.title)
-                    .padding()
-                    
-                    Button("8") {
-                        message = "Incorrect"
+                    Text("After Jesus fed 5,000 people, how many baskets of food were left over?")
+                        .font(.title)
+                        .padding(.top, 50.0)
+                    VStack {
+                        Button("15") {
+                            message = "Incorrect"
+                        }
+                        .font(.title)
+                        .padding()
+                        
+                        Button("7") {
+                            message = "Incorrect"
+                        }
+                        .font(.title)
+                        .padding()
+                        
+                        Button("12") {
+                            message = "Correct"
+                        }
+                        .font(.title)
+                        .padding()
+                        
+                        Button("8") {
+                            message = "Incorrect"
+                            
+                        }
+                        .font(.title)
+                        .padding()
+                        
+                        Text("\(message)")
                         
                     }
-                    .font(.title)
-                    .padding()
-                    
-                    Text("\(message)")
-                    
                 }
-            }
+        }
             .padding()
             Spacer()
             NavigationLink(destination: Question2()) {

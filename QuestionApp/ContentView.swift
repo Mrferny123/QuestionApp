@@ -12,18 +12,23 @@ struct ContentView: View {
     var body: some View {
     NavigationStack {
         ZStack {
-            LinearGradient(colors: [.white, .black], startPoint: .top, endPoint: .bottom)
-            Color(red: 124.0/255.0, green: 127.0/255.0, blue: 101.0/255.0)
-                .ignoresSafeArea(.all)
+            Image("true app bg")
+//                .resizable()
+//                .scaledToFit()
+//                .frame(width: 400, height: 800)
                 
                 VStack {
-                    Text("Do you really know your Bible?")
-                        .font(.largeTitle)
-                        Spacer()
-                            .frame(height: 20)
+                    Spacer()
+                        .frame(height: 700)
                     NavigationLink(destination: Question1()) {
-                        Text("Start")
-                            .foregroundStyle(Color.white)
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10.0)
+                                .fill(Color(red: 190.0/255.0, green: 168.0/255.0, blue: 170.0/255.0))
+                                .frame(width: 205.0, height: 55.0)
+                            Text("Start the quiz")
+                                .foregroundStyle(Color.black)
+                                .font(.system(size: 30.0))
+                        }
                     }
                 }
                 
