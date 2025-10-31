@@ -31,11 +31,11 @@ struct ContentView: View {
                         }
                     }
                 }
-                
                 .padding()
                 //                Spacer()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
     

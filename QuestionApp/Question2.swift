@@ -34,6 +34,7 @@ struct Question2: View {
                         Button("4") {
                             questionAnswered = true
                             answerCorrect = true
+                            score += 1 
                         }
                         .font(.title)
                         .padding()
@@ -74,6 +75,7 @@ struct Question2: View {
             }
             .padding()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 #Preview {

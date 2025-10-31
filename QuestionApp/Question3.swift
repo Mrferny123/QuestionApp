@@ -46,12 +46,16 @@ struct Question3: View {
                         Button("Matthias") {
                             questionAnswered = true
                             answerCorrect = true
+                            score += 1
                                 
                         }
                         .font(.title)
                         .padding()
                         .disabled(questionAnswered)
                         
+                        if questionAnswered {
+                            Text(answerCorrect ? "Correct!" : "Incorrect, the correct is Matthias")
+                        }
 
                         
                     }
@@ -61,7 +65,7 @@ struct Question3: View {
                             RoundedRectangle(cornerRadius: 15.0)
                                 .fill(Color(red: 190.0/255.0, green: 168.0/255.0, blue: 170.0/255.0))
                                 .frame(width: 200.0, height: 50.0)
-                            Text("Next Question")
+                            Text("See Results")
                                 .foregroundStyle(Color.black)
                             
                         }
@@ -71,6 +75,7 @@ struct Question3: View {
             }
             .padding()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 #Preview {

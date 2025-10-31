@@ -73,6 +73,7 @@ struct Question1: View {
             .padding()
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

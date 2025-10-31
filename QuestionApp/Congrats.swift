@@ -22,7 +22,22 @@ struct Congrats: View {
                         .frame(maxWidth: 350)
                         .font(.title)
                         .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
+                    Spacer()
+                        .frame(height: 35.0)
                     //use if, else if thing to say different message options
+                    if score == 0 {
+                        Text("Gulp, you don't really pay attent to details, huh?")
+                            .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
+                    } else if score < 3 {
+                        Text("Okay but some of the questions were tricky so")
+                            .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
+                    } else {
+                        Text("WOWOW! You're either really cool or a cheater")
+                            .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
+                    }
+                    
+                    Spacer()
+                        .frame(height : 55.0)
                     NavigationLink(destination: ContentView()) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 15.0)
@@ -35,6 +50,7 @@ struct Congrats: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 #Preview {
