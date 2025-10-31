@@ -48,14 +48,13 @@ struct Question3: View {
                         
                     }
                     .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
+                    NavigationLink(destination: Congrats()) {
+                        Text("Next")
+                    }
+                    //take user to congrats page
                 }
             }
             .padding()
-            Spacer()
-            NavigationLink(destination: ContentView()) {
-                Text("Go Back to the Start")
-            }
-            //take user to congrats page
         }
     }
 }

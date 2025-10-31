@@ -52,13 +52,19 @@ struct Question2: View {
                         
                     }
                     .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
+                    
+                    NavigationLink(destination: Question3()) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15.0)
+                                .fill(Color(red: 190.0/255.0, green: 168.0/255.0, blue: 170.0/255.0))
+                                .frame(width: 200.0, height: 55.0)
+                            Text("Next Question")
+                                .foregroundStyle(Color.black)
+                        }
+                    }
                 }
             }
             .padding()
-            Spacer()
-            NavigationLink(destination: Question3()) {
-                Text("Next Question")
-            }
         }
     }
 }
