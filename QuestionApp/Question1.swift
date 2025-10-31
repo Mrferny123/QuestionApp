@@ -37,8 +37,8 @@ struct Question1: View {
                         .disabled(questionAnswered)
                         
                         Button("12") {
-                            answerCorrect = true
                             questionAnswered = true
+                            answerCorrect = true
                             score += 1
                         }
                         .font(.title)
@@ -60,7 +60,7 @@ struct Question1: View {
                     }
                     .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
                     
-                    NavigationLink(destination: Question2()) {
+                    NavigationLink(destination: Question2(score: $score)) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 15.0)
                                 .fill(Color(red: 190.0/255.0, green: 168.0/255.0, blue: 170.0/255.0))

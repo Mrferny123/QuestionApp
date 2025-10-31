@@ -12,14 +12,16 @@ import SwiftUI
 //    var body: some View {
 
 struct Congrats: View {
+    @Binding var score: Int
     var body: some View {
         NavigationStack {
             ZStack {
                 Image("blank bg")
                 VStack {
-                    Text("Congrats on completing the quiz! You got _ out of 3 right!")
+                    Text("Congrats on completing the quiz! You got \(score) out of 3 right!")
                         .frame(maxWidth: 350)
                         .font(.title)
+                        .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
                     //use if, else if thing to say different message options
                     NavigationLink(destination: ContentView()) {
                         ZStack {
@@ -36,5 +38,5 @@ struct Congrats: View {
     }
 }
 #Preview {
-    Congrats()
+    Congrats(score: .constant(0))
 }

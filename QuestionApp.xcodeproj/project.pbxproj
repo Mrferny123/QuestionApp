@@ -61,8 +61,8 @@
 			children = (
 				0A6B9F922C2B0616006A5C25 /* QuestionAppApp.swift */,
 				0A6B9F942C2B0616006A5C25 /* ContentView.swift */,
-				0A6B9FA02C2B0B02006A5C25 /* Question2.swift */,
 				0A6B9FA42C2B0CC5006A5C25 /* Question1.swift */,
+				0A6B9FA02C2B0B02006A5C25 /* Question2.swift */,
 				0A6B9FA22C2B0C0D006A5C25 /* Question3.swift */,
 				0A5AA0CD2EB1A93B0059EB77 /* Congrats.swift */,
 				0A6B9F962C2B0618006A5C25 /* Assets.xcassets */,
