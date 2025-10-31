@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct Question1: View {
-    @State private var message = ""
+    @Binding var score: Int
+    @State private var questionAnswered = false
+    @State private var answerCorrect = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -17,34 +19,43 @@ struct Question1: View {
                     Text("After Jesus fed 5,000 people, how many baskets of food were left over?")
                         .frame(maxWidth: 350)
                         .font(.title)
+                        .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
                         .padding(.top, 50.0)
                     VStack {
                         Button("15") {
-                            message = "Incorrect"
+                            questionAnswered = true
                         }
                         .font(.title)
                         .padding()
+                        .disabled(questionAnswered)
                         
                         Button("7") {
-                            message = "Incorrect"
+                            questionAnswered = true
                         }
                         .font(.title)
                         .padding()
+                        .disabled(questionAnswered)
                         
                         Button("12") {
-                            message = "Correct"
+                            answerCorrect = true
+                            questionAnswered = true
+                            score += 1
                         }
                         .font(.title)
                         .padding()
+                        .disabled(questionAnswered)
                         
                         Button("8") {
-                            message = "Incorrect"
+                            questionAnswered = true
                             
                         }
                         .font(.title)
                         .padding()
+                        .disabled(questionAnswered)
                         
-                        Text("\(message)")
+                        if questionAnswered {
+                            Text(answerCorrect ? "Correct!" : "Wrong, the correct answer is 12")
+                        }
                         
                     }
                     .foregroundStyle(Color(red: 231.0/255.0, green: 226.0/255.0,blue: 217.0/255.0))
@@ -66,5 +77,5 @@ struct Question1: View {
 }
 
 #Preview {
-    Question1()
+    Question1(score: .constant(0))
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var message = ""
+    @State private var score = 0
     var body: some View {
     NavigationStack {
         ZStack {
@@ -20,7 +20,7 @@ struct ContentView: View {
                 VStack {
                     Spacer()
                         .frame(height: 700)
-                    NavigationLink(destination: Question1()) {
+                    NavigationLink(destination: Question1(score: $score)) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10.0)
                                 .fill(Color(red: 190.0/255.0, green: 168.0/255.0, blue: 170.0/255.0))
